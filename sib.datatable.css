@@ -1,0 +1,79 @@
+.sib-datatable {
+    width: 100%;
+    border: 1px solid #f1f1f1;
+    box-sizing: border-box;
+    overflow-x: auto;
+}
+.sibdatatable-inner {
+    width: 100%;
+    min-width: 600px;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.sib-datatable .sibdatatable-body {
+    border-radius: 10px;
+    border: 1px solid #d0d0d0;
+}
+.sibdatatable-inner .sibdatatable-navi {
+    float: right;
+}
+.sibdatatable-inner .sibdatatable-navi .sibdatatable-navi-prev,
+.sibdatatable-inner .sibdatatable-navi .sibdatatable-navi-next {
+    cursor: pointer;
+    padding: 2px 6px;
+    border: 1px solid #aaaaaa;
+}
+.sibdatatable-limit {
+    float: left;
+}
+.sibdatatable-limit span {
+    margin-right: 10px;
+}
+.sibdatatable-body table.table-contents {
+    width: 100%;
+}
+.sibdatatable-body table.table-contents {
+    font-size: 13px;
+    cursor: default;
+    table-layout: fixed;
+    border-collapse: separate;
+    border-spacing: 0;
+}
+.sibdatatable-body table.table-contents td.col-head {
+    background-color: #f2f2f2;
+    border-bottom: 1px solid #d0d0d0;
+    cursor: pointer;
+}
+.sibdatatable-body table.table-contents tr,
+.sibdatatable-body table.table-contents td {
+    line-height: 35px;
+    padding-left: 10px;
+}
+.sibdatatable-body table.table-contents td.row-select {
+    width: 40px;
+}
+.sibdatatable-body table.table-contents td.row-head {
+    background-color: #f2f2f2;
+    font-weight: 500;
+    color: #595959;
+    border-right: 1px solid #d0d0d0;
+}
+.sibdatatable-body table.table-contents td {
+    white-space: nowrap;
+    vertical-align: top;
+    border-bottom: 1px dotted #d0d0d0;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.sibdatatable-body table.table-contents td.col-head:hover {
+    background-color: #e0e0e0;
+}
+.sibdatatable-spin {
+    display: inline-block;
+    position: relative;
+    left: 50%;
+    height: 50%;
+    padding: 20px;
+}

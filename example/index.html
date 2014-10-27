@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title></title>
+    <script src="js/jquery-1.7.2.min.js"></script>
+    <script src="js/jquery.sib.datatable.js"></script>
+    <script src="js/bootstrap/js/bootstrap.js"></script>
+    <link href="js/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/fontawesome/css/font-awesome.css" rel="stylesheet">
+    <link href="css/sib.datatable.css" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <h1>Contact Table</h1>
+    </div>
+    <div class="row">
+        <div class="col-md-10">
+            <div id="contact_table" class="grid col-md-12"></div>
+        </div>
+    </div>
+    <div class="row">
+        <h2>Contact Table</h2>
+    </div>
+</div>
+
+</body>
+    <script>
+        jQuery(document).ready(function(e) {
+            jQuery('#contact_table').sibdatatable({
+                dataSourceType: 'remote',
+                dataSource: 'http://ec2-54-76-22-181.eu-west-1.compute.amazonaws.com/json/mass_contacts.php',
+                Columns: [{
+                    fields: 'email',
+                    title: 'Email Address'
+                },{
+                    fields: 'PRENOM',
+                    title: 'PRENOM'
+                },{
+                    fields: 'NOM',
+                    title: 'NOM'
+                }],
+                sortable: true,
+                filterable:true,
+                pageable: true,
+                pagingLimit: 25,
+                orderBy: 'email'
+            });
+        });
+    </script>
+</html>
